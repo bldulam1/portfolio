@@ -1,0 +1,33 @@
+{
+  "name": "brendon-portfolio",
+  "version": "1.0.0",
+  "description": "This is my portfolio project",
+  "main": "app.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bldulam1/portfolio.git"
+  },
+  "keywords": [
+    "brendon",
+    "dulam",
+    "portfolio"
+  ],
+  "author": "Brendon Dulam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bldulam1/portfolio/issues"
+  },
+  "homepage": "https://github.com/bldulam1/portfolio#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.4.0",
+    "@material-ui/icons": "^4.2.1",
+    "next": "^9.0.5",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  }
+}
