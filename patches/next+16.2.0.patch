@@ -1,0 +1,15 @@
+diff --git a/node_modules/next/dist/build/webpack/plugins/css-minimizer-plugin.js b/node_modules/next/dist/build/webpack/plugins/css-minimizer-plugin.js
+index 5513ccb..90a2b91 100644
+--- a/node_modules/next/dist/build/webpack/plugins/css-minimizer-plugin.js
++++ b/node_modules/next/dist/build/webpack/plugins/css-minimizer-plugin.js
+@@ -53,6 +53,10 @@ class CssMinimizerPlugin {
+             } else {
+                 return new _webpack.sources.RawSource(res.css);
+             }
++        }).catch(()=>{
++            // cssnano-simple cannot parse modern CSS values (e.g. oklch) generated
++            // by Tailwind CSS v4. Return the unminified source as a fallback.
++            return new _webpack.sources.RawSource(input);
+         });
+     }
+     apply(compiler) {
